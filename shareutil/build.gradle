@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+    }
+
+}
+
+dependencies {
+    provided 'com.android.support:design:24.2.1'
+    provided 'io.reactivex:rxandroid:1.2.1'
+    provided 'io.reactivex:rxjava:1.2.3'
+    provided "com.squareup.retrofit2:retrofit:$rootProject.retrofit2Version"
+    provided "com.squareup.retrofit2:converter-gson:$rootProject.retrofit2Version"
+    provided "com.squareup.retrofit2:adapter-rxjava:$rootProject.retrofit2Version"
+    provided 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+    compile files('libs/open_sdk_r5756_lite.jar')
+    compile files('libs/weiboSDKCore_3.1.4.jar')
+    compile files('libs/libammsdk.jar')
+}
+
